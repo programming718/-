@@ -73,11 +73,6 @@ int select(int a[], int left, int right, int k)
                 break;
        }
        swap(&a[i], &a[right -1]);
-       //printf("%d ",i);
-       //for(t = 0; t < 9; t++)
-    //        printf("%d ", a[t]);
-      // printf("\n");
-       //printf("(%d %d)", k,i);
        if(k == i) return a[k];
        if(k < i) return select(a, left, i-1,k);
        if(k > i) return select(a, i+1, right,k);    
